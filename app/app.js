@@ -8,9 +8,7 @@ var myApp = angular.module('myApp', [
     'myApp.view2',
     'myApp.view3',
     'myApp.view4',
-    'bootstarp',
     'myApp.version'
-    ,'loadMask',
 ]).
 config(['$routeProvider', function($routeProvider) {
 

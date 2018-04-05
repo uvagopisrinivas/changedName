@@ -2,7 +2,7 @@
 <p>This is the partial for view 1.</p>
 <h1>{{value1}}</h1>
 <h4>Upstream</h4>
-<div class="table-responsive-sm">
+<div class="table-responsive-md">
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -21,6 +21,11 @@
             </tr>
         </thead>
         <tbody>
+            <tr ng-if="!signalLevelsData.upstream" class="text-center">
+                <td>
+                    <load-mask></load-mask>
+                </td>
+            </tr>
             <tr ng-repeat="info in signalLevelsData.upstream">
                 <td>{{info.frequencyString}}</td>
                 <td>{{info.modulationType}}</td>
@@ -50,6 +55,11 @@
         </tr>
     </thead>
     <tbody>
+        <tr ng-if="!signalLevelsData.downstream" class="text-center">
+            <td>
+                <load-mask></load-mask>
+            </td>
+        </tr>
         <tr ng-repeat="info in signalLevelsData.downstream">
             <td>{{info.frequencyString}}</td>
             <td>{{info.modulationType}}</td>
